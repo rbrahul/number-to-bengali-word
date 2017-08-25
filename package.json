@@ -1,5 +1,5 @@
 {
-  "name": "number-to-bengali-word",
+  "name": "bengali-number",
   "version": "1.0.0",
   "description": "An amazing package to convert your number to bengali word representation.",
   "main": "./lib/index.js",
@@ -9,9 +9,17 @@
   "scripts": {
     "test": "mocha --reporter spec"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbrahul/number-to-bengali-word.git"
+  },
+  "keywords": ["bengali","number","word","convert","bangla","format","amount"],
+  "author": "Rahul Baruri <rahulbaruri1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rbrahul/number-to-bengali-word/issues"
+  },
+  "homepage": "https://github.com/rbrahul/number-to-bengali-word",
   "devDependencies": {
     "chai": "^4.1.1",
     "mocha": "^3.5.0"
