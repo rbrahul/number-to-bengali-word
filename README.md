@@ -44,6 +44,8 @@ $ npm test
 
   11 passing (20ms)
 ```
-**Enjoy Coding :simple_smile:**
+**Enjoy Coding :) **
 
 **NB:** For large numbers such as **3.7722526363525255e+27** it may provide unexpected result. And sometimes for fraction value the result may very a bit.
+
+**Developed with ♥ and respect to my mother language Bengali**
