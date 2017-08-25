@@ -1,0 +1,60 @@
+'use strict';
+
+var expect = require('chai').expect;
+var converToBengaliWord = require('../lib');
+
+describe('#Convert Amount to Bengali Word Representation Test', function () {
+    it('should convert 1 to bengali এক', function () {
+        var result = converToBengaliWord(1);
+        expect(result).to.equal('এক');
+    });
+
+    it('should convert 10000 to bengali দশ হাজার', function () {
+        var result = converToBengaliWord(10000);
+        expect(result).to.equal('দশ হাজার');
+    });
+
+    it('should convert 1277548.57 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(1277548.57);
+        expect(result).to.equal('বার লক্ষ্য সাতাত্তর হাজার পাঁচ শত আটচল্লিশ দশমিক সাতান্ন');
+    });
+
+    it('should convert 7576516080681.50 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(7576516080681.50);
+        expect(result).to.equal('সাত লক্ষ্য সাতান্ন হাজার ছয় শত একান্ন কোঁটি ষাট লক্ষ্য আশি হাজার ছয় শত একাশি দশমিক পাঁচ');
+    });
+
+    it('should convert 9999999999999 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(9999999999999);
+        expect(result).to.equal('নয় লক্ষ্য নিরানব্বই হাজার নয় শত নিরানব্বই কোঁটি নিরানব্বই লক্ষ্য নিরানব্বই হাজার নয় শত নিরানব্বই');
+    });
+
+    it('should convert 111111111110 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(111111111110);
+        expect(result).to.equal('এগারো হাজার এক শত এগারো কোঁটি এগারো লক্ষ্য এগারো হাজার এক শত দশ');
+    });
+    it('should convert .5 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(.5);
+        expect(result).to.equal(' দশমিক পাঁচ');
+    });
+
+    it('should convert 111222333444555 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(111222333444555);
+        expect(result).to.equal('এক কোঁটি এগারো লক্ষ্য বাইশ হাজার দুই শত তেত্রিশ কোঁটি চৌত্রিশ লক্ষ্য চুয়াল্লিশ হাজার পাঁচ শত পঞ্চান্ন');
+    });
+
+    it('should convert 200300400500.25 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(200300400500.25);
+        expect(result).to.equal('বিশ হাজার ত্রিশ কোঁটি চার লক্ষ্য পাঁচ শত দশমিক পঁচিশ');
+    });
+
+    it('should convert 3.1416 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(3.1416);
+        expect(result).to.equal('তিন দশমিক এক হাজার চার শত ষোল');
+    });
+
+     it('should convert 100000000700.1234 to it\'s bengali word represetation', function () {
+        var result = converToBengaliWord(100000000700.1234);
+        expect(result).to.equal('দশ হাজার কোঁটি সাত শত দশমিক এক হাজার দুই শত চৌত্রিশ');
+    });
+});
