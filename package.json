@@ -1,6 +1,6 @@
 {
   "name": "bengali-number",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "An amazing package to convert your number to bengali word representation.",
   "main": "./lib/index.js",
   "directories": {
