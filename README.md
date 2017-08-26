@@ -15,7 +15,7 @@ $ npm i bengali-number
 
 var toBengaliWord = require('bengali-number');
 var result = toBengaliWord(37762086.507);
-console.log(result);  // output: তিন কোঁটি সাতাত্তর লক্ষ্য বাষট্টি হাজার ছিয়াশি দশমিক পাঁচ শত সাত
+console.log(result);  // output: তিন কোঁটি সাতাত্তর লক্ষ বাষট্টি হাজার ছিয়াশি দশমিক পাঁচ শত সাত
 
 ```
 # Run Test:
