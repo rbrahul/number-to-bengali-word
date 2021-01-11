@@ -13,9 +13,27 @@ $ npm i bengali-number
 
 ```javascript
 
-var toBengaliWord = require('bengali-number');
-var result = toBengaliWord(37762086.507);
-console.log(result);  // output: তিন কোটি সাতাত্তর লক্ষ বাষট্টি হাজার ছিয়াশি দশমিক পাঁচ শুন্য সাত
+const { toBengaliNumber, toBengaliWord} = require('bengali-number');
+
+...
+// Convert English number to it's bengali number representation
+
+const bengaliNumberRepresentation = toBengaliNumber(9876543210.0123456789);
+consle.log(bengaliNumberRepresentation) // output: ৯৮৭৬৫৪৩২১০.০১২৩৪৫৬৭৮৯
+
+...
+
+// Convert only numeric part of a text
+
+const bengaliNumberWithText = toBengaliNumber('USD 999.123');
+consle.log(bengaliNumberWithText) // output: USD ৯৯৯.১২৩
+
+...
+
+// Convert English number to it's Bengali word representation
+
+const bengaliWordRepresentation = toBengaliWord(37762086.507);
+console.log(bengaliWordRepresentation);  // output: তিন কোটি সাতাত্তর লক্ষ বাষট্টি হাজার ছিয়াশি দশমিক পাঁচ শুন্য সাত
 
 ```
 # Run Test:
@@ -28,7 +46,12 @@ $ npm test
 **Then you will have these messages in terminal:**
 
 ```
-  #Convert Amount to Bengali Word Representation Test
+   Converts English number/digit to it's Bengali number representation
+    ✓ should convert 'USD 987.123' to 'USD ৯৮৭.১২৩'
+    ✓ should convert 1234567890 to ১২৩৪৫৬৭৮৯০
+    ✓ should convert 9876543210.0123456789 to ৯৮৭৬৫৪৩২১০.০১২৩৪৫৬৭৮৯
+
+  Convert Amount to Bengali Word Representation Test
     ✓ should convert 1 to bengali এক
     ✓ should convert 10000 to bengali দশ হাজার
     ✓ should convert 1277548.57 to it's bengali word represetation
@@ -40,14 +63,10 @@ $ npm test
     ✓ should convert 200300400500.25 to it's bengali word represetation
     ✓ should convert 3.1416 to it's bengali word represetation
     ✓ should convert 100000000700.1234 to it's bengali word represetation
-
-
-  11 passing (20ms)
 ```
 **All the best, enjoy Javascript** :smiley:
 
 **NB:**
-For large numbers such as **3.7722526363525255e+27** it may provide unexpected result.
-And sometimes for fraction value the result may vary a bit.
+For large numbers such as **3.7722526363525255e+27** it may provide unexpected result because of Javascript's long number limitation.
 
 **Developed with ♥ and respect to my mother language Bengali**

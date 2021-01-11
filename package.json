@@ -13,7 +13,15 @@
     "type": "git",
     "url": "git+https://github.com/rbrahul/number-to-bengali-word.git"
   },
-  "keywords": ["bengali","number","word","convert","bangla","format","amount"],
+  "keywords": [
+    "bengali",
+    "number",
+    "word",
+    "convert",
+    "bangla",
+    "format",
+    "amount"
+  ],
   "author": "Rahul Baruri <rahulbaruri1@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -22,6 +30,6 @@
   "homepage": "https://github.com/rbrahul/number-to-bengali-word",
   "devDependencies": {
     "chai": "^4.1.1",
-    "mocha": "^3.5.0"
+    "mocha": "^8.2.1"
   }
 }
