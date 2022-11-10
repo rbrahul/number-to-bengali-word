@@ -30,6 +30,6 @@
   "homepage": "https://github.com/rbrahul/number-to-bengali-word",
   "devDependencies": {
     "chai": "^4.1.1",
-    "mocha": "^8.2.1"
+    "mocha": "^10.1.0"
   }
 }
